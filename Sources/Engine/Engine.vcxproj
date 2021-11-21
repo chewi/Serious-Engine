@@ -926,9 +926,6 @@ copy Release\$(TargetName).lib $(SolutionDir)..\Bin\ &gt;nul</Command>
     <CustomBuild Include="Math\Geometry.inl">
       <FileType>Document</FileType>
     </CustomBuild>
-    <CustomBuild Include="Base\FLEX.SKL">
-      <FileType>Document</FileType>
-    </CustomBuild>
     <CustomBuild Include="Base\Parser.y">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pushd $(SolutionDir)
@@ -948,15 +945,12 @@ del %(RootDir)%(Directory)\Parser.c /q</Command>
     </CustomBuild>
     <CustomBuild Include="Base\Scanner.l">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex --wincompat -o%(RootDir)%(Directory)\Scanner.cpp -S%(RootDir)%(Directory)\Flex.skl %(RootDir)%(Directory)\Scanner.l</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex --wincompat -o%(RootDir)%(Directory)\Scanner.cpp %(RootDir)%(Directory)\Scanner.l</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating shell scanner source</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)\Scanner.cpp;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex --wincompat -o%(RootDir)%(Directory)\Scanner.cpp -S%(RootDir)%(Directory)\Flex.skl %(RootDir)%(Directory)\Scanner.l</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex --wincompat -o%(RootDir)%(Directory)\Scanner.cpp %(RootDir)%(Directory)\Scanner.l</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating shell scanner source</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)\Scanner.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Ska\smcFlex.skl">
-      <FileType>Document</FileType>
     </CustomBuild>
     <CustomBuild Include="Ska\smcPars.y">
       <FileType>Document</FileType>
@@ -975,9 +969,9 @@ del %(RootDir)%(Directory)\smcPars.c /q</Command>
     </CustomBuild>
     <CustomBuild Include="Ska\smcScan.l">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex --wincompat -o%(RootDir)%(Directory)\smcScan.cpp -S%(RootDir)%(Directory)\smcFlex.skl %(RootDir)%(Directory)\smcScan.l</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">flex --wincompat -o%(RootDir)%(Directory)\smcScan.cpp %(RootDir)%(Directory)\smcScan.l</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)\smcScan.cpp;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex --wincompat -o%(RootDir)%(Directory)\smcScan.cpp -S%(RootDir)%(Directory)\smcFlex.skl %(RootDir)%(Directory)\smcScan.l</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">flex --wincompat -o%(RootDir)%(Directory)\smcScan.cpp %(RootDir)%(Directory)\smcScan.l</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)\smcScan.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="Classes\BaseEvents.es">

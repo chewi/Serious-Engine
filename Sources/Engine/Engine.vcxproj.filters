@@ -1391,16 +1391,10 @@
     <CustomBuild Include="Math\Geometry.inl">
       <Filter>Header Files\Math Headers</Filter>
     </CustomBuild>
-    <CustomBuild Include="Base\FLEX.SKL">
-      <Filter>Grammar Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="Base\Parser.y">
       <Filter>Grammar Files</Filter>
     </CustomBuild>
     <CustomBuild Include="Base\Scanner.l">
-      <Filter>Grammar Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Ska\smcFlex.skl">
       <Filter>Grammar Files</Filter>
     </CustomBuild>
     <CustomBuild Include="Ska\smcPars.y">
