@@ -739,7 +739,7 @@
     <ClCompile Include="Classes\PlayerEntity.cpp">
       <Filter>Generated Sources</Filter>
     </ClCompile>
-    <ClCompile Include="Base\SCANNER.CPP">
+    <ClCompile Include="Base\Scanner.cpp">
       <Filter>Generated Sources</Filter>
     </ClCompile>
     <ClCompile Include="Ska\smcPars.cpp">

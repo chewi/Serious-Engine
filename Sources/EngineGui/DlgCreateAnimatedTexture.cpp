@@ -16,7 +16,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 // DlgCreateAnimatedTexture.cpp : implementation file
 //
 
-#include "EngineGui/StdH.h"
+#include <EngineGui/StdH.h>
 #include "DlgCreateAnimatedTexture.h"
 #include <Engine/Templates/Stock_CTextureData.h>
 

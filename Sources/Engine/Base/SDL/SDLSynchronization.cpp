@@ -3,7 +3,7 @@
 #include "SDL.h"
 #include "SDL_thread.h"
 
-#include "Engine/StdH.h"
+#include <Engine/StdH.h>
 #include <Engine/Base/Synchronization.h>
 
 // !!! FIXME: rcg10142001 Most of CTSingleLock is platform-independent.

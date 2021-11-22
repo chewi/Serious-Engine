@@ -1,6 +1,6 @@
 /* Copyright (c) 2002-2012 Croteam Ltd. All rights reserved. */
 
-#include "SeriousSam/StdH.h"
+#include <SeriousSam/StdH.h>
 #include <Engine/Base/KeyNames.h>
 #include "MenuPrinting.h"
 #include <GameMP/LCDDrawing.h>

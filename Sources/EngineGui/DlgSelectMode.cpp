@@ -16,7 +16,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 // DlgSelectMode.cpp : implementation file
 //
 
-#include "EngineGui/StdH.h"
+#include <EngineGui/StdH.h>
 
 #ifdef _DEBUG
 #undef new

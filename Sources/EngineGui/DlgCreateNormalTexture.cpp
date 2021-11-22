@@ -16,7 +16,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 // DlgCreateNormalTexture.cpp : implementation file
 //
 
-#include "EngineGui/StdH.h"
+#include <EngineGui/StdH.h>
 #include "DlgCreateNormalTexture.h"
 #include <Engine/Templates/Stock_CTextureData.h>
 

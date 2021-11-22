@@ -16,7 +16,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 // DlgChooseTextureType.cpp : implementation file
 //
 
-#include "EngineGui/StdH.h"
+#include <EngineGui/StdH.h>
 #include "DlgChooseTextureType.h"
 
 #ifdef _DEBUG

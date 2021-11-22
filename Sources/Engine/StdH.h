@@ -28,6 +28,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #include <search.h>   // for qsort
 #include <float.h>    // for FPU control
 
+#include <Engine/Base/Base.h>
+
 #ifdef PLATFORM_WIN32
 #include <malloc.h>
 #include <conio.h>
