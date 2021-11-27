@@ -228,7 +228,7 @@ static __int64 GetCPUSpeedHz(void)
     return 1;
   }
 
-  INDEX iSpeed, iTry;
+  INDEX iSpeed, iTry, iSet;
   INDEX ctTotalFaults=0;
   __int64 llTimeLast, llTimeNow;
   __int64 llCPUBefore, llCPUAfter; 
@@ -236,7 +236,7 @@ static __int64 GetCPUSpeedHz(void)
   __int64 llSpeedMeasured;
 
   // try to measure 10 times
-  for( INDEX iSet=0; iSet<10; iSet++)
+  for( iSet=0; iSet<10; iSet++)
   { // one time has several tries
     for( iTry=0; iTry<MAX_MEASURE_TRIES; iTry++)
     { // wait the state change on the timer
