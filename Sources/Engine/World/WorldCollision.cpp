@@ -891,7 +891,7 @@ void CClipMove::ClipToNonZoningSector(CBrushSector *pbsc)
   const int count = pbsc->bsc_abpoPolygons.sa_Count;
   for (i = 0; i < count; i++, itbpo++) {
     // if its bbox has no contact with bbox of movement path, or it is passable
-    __builtin_prefetch(&itbpo[1].bpo_ulFlags);
+    PREFETCH(&itbpo[1].bpo_ulFlags);
     if ((itbpo->bpo_ulFlags&BPOF_PASSABLE)
       ||!itbpo->bpo_boxBoundingBox.HasContactWith(cm_boxMovementPath)) {
       // skip it

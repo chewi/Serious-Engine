@@ -805,4 +805,10 @@ inline ULONG rotl(ULONG ul, int bits)
     #endif
 }
 
+#ifdef __GNUC__
+#define PREFETCH(x) __builtin_prefetch(x)
+#else
+#define PREFETCH(x) x
+#endif
+
 #endif  /* include-once check. */
