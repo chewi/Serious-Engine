@@ -10,8 +10,8 @@
 #define THREADLOCAL(type, name, defval) type name = defval
 #define EXTERNTHREADLOCAL(type, name) extern type name
 #elif (defined _MSC_VER)
-#define THREADLOCAL(type, name, defval) type __declspec(thread) name = defval
-#define EXTERNTHREADLOCAL(type, name) extern type __declspec(thread) name
+#define THREADLOCAL(type, name, defval) __declspec(thread) type name = defval
+#define EXTERNTHREADLOCAL(type, name) extern __declspec(thread) type name
 #else
 // Pretty much everything has __thread now. If it doesn't, do SINGLE_THREADED or
 //  roll something with pthread_key or SDL or whatever. See revision history for a start.
