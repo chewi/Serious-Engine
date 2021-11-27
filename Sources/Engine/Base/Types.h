@@ -234,36 +234,6 @@ MY_STATIC_ASSERT(size_tSize, sizeof(size_t) == sizeof(void*));
         }
     }
 
-    inline ULONG rotl(ULONG ul, int bits)
-    {
-        #if (defined __GNU_INLINE_X86_32__)
-            // This, on the other hand, is wicked fast.  :)
-            __asm__ __volatile__ (
-                "roll %%cl, %%eax    \n\t"
-                    : "=a" (ul)
-                    : "a" (ul), "c" (bits)
-                    : "cc"
-            );
-            return(ul);
-
-        #elif (defined __MSVC_INLINE__)
-            // MSVC version for Intel C++...
-            __asm
-            {
-                mov eax, dword ptr [ul]
-                mov ecx, dword ptr [bits]
-                rol eax, cl
-                mov dword ptr [ul], eax
-            }
-            return(ul);
-
-        #else
-            // DG: according to http://blog.regehr.org/archives/1063 this is fast
-            return (ul<<bits) | (ul>>(-bits&31));
-        #endif
-    }
-
-    typedef uint64_t __uint64;
     #if (!defined __INTEL_COMPILER)
       typedef int64_t __int64;
     #endif
@@ -806,5 +776,33 @@ inline __uint64 BYTESWAP64_unsigned(__uint64 x)
 
 #endif
 
-#endif  /* include-once check. */
+inline ULONG rotl(ULONG ul, int bits)
+{
+    #if (defined __GNU_INLINE_X86_32__)
+        // This, on the other hand, is wicked fast.  :)
+        __asm__ __volatile__ (
+            "roll %%cl, %%eax    \n\t"
+                : "=a" (ul)
+                : "a" (ul), "c" (bits)
+                : "cc"
+        );
+        return(ul);
 
+    #elif (defined __MSVC_INLINE__)
+        // MSVC version for Intel C++...
+        __asm
+        {
+            mov eax, dword ptr [ul]
+            mov ecx, dword ptr [bits]
+            rol eax, cl
+            mov dword ptr [ul], eax
+        }
+        return(ul);
+
+    #else
+        // DG: according to http://blog.regehr.org/archives/1063 this is fast
+        return (ul<<bits) | (ul>>(-bits&31));
+    #endif
+}
+
+#endif  /* include-once check. */
