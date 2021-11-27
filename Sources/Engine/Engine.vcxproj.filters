@@ -8,6 +8,9 @@
     <Filter Include="Source Files\Base">
       <UniqueIdentifier>{a0bd9f7d-4f48-40f4-9848-b1d60ed1446f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Base\Win32">
+      <UniqueIdentifier>{fe0e3f46-15f6-4752-8fc2-b3885cc7736a}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\Math">
       <UniqueIdentifier>{013eefac-b492-492c-9ecd-8b1dd97fa78a}</UniqueIdentifier>
     </Filter>
@@ -196,8 +199,8 @@
     <ClCompile Include="Base\Stream.cpp">
       <Filter>Source Files\Base</Filter>
     </ClCompile>
-    <ClCompile Include="Base\Synchronization.cpp">
-      <Filter>Source Files\Base</Filter>
+    <ClCompile Include="Base\Win32\Win32Synchronization.cpp">
+      <Filter>Source Files\Base\Win32</Filter>
     </ClCompile>
     <ClCompile Include="Base\Timer.cpp">
       <Filter>Source Files\Base</Filter>

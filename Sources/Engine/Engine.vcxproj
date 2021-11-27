@@ -251,7 +251,7 @@ copy Release\$(TargetName).lib $(SolutionDir)..\Bin\ &gt;nul</Command>
     </ClCompile>
     <ClCompile Include="Base\Stream.cpp">
     </ClCompile>
-    <ClCompile Include="Base\Synchronization.cpp" />
+    <ClCompile Include="Base\Win32\Win32Synchronization.cpp" />
     <ClCompile Include="Base\Timer.cpp">
     </ClCompile>
     <ClCompile Include="Base\Translation.cpp" />
