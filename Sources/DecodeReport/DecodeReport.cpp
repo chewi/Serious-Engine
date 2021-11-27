@@ -116,7 +116,7 @@ void SubMain( int argc, char *argv[])
       strmSrc.GetLine_t(strLine);
 
       // try to find address marker in it
-      char *strAdr = strstr(strLine, "$adr:");
+      const char *strAdr = strstr(strLine, "$adr:");
       // if there is no marker
       if (strAdr==NULL) {
         // just copy the line
