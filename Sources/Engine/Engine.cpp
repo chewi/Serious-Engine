@@ -330,10 +330,10 @@ static void PlatformIdentification(void)
 {
 // !!! FIXME: Abstract this somehow.
 #if (defined PLATFORM_WIN32)
-  OSVERSIONINFO osv;
+  OSVERSIONINFOA osv;
   memset(&osv, 0, sizeof(osv));
   osv.dwOSVersionInfoSize = sizeof(osv);
-  if (GetVersionEx(&osv)) {
+  if (GetVersionExA(&osv)) {
     switch (osv.dwPlatformId) {
     case VER_PLATFORM_WIN32s:         sys_strOS = "Win32s";  break;
     case VER_PLATFORM_WIN32_WINDOWS:  sys_strOS = "Win9x"; break;
