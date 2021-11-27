@@ -555,7 +555,7 @@ BOOL CWorldEditorApp::SubInitInstance()
 #endif
 
   // initialize entire engine
-  SE_InitEngine("SeriousEditor");
+  SE_InitEngine("", "SeriousEditor");
   SE_LoadDefaultFonts();
 
   // settings will be saved into registry instead of ini file

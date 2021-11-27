@@ -48,7 +48,7 @@ void SubMain( int argc, char *argv[])
   }
 
   // initialize engine
-  SE_InitEngine("");
+  SE_InitEngine(argv[0], "");
 
   // first input parameter is texture name
   CTFileName fnTextureFileName = CTString(argv[1]);
