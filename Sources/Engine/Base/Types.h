@@ -132,7 +132,9 @@ MY_STATIC_ASSERT(size_tSize, sizeof(size_t) == sizeof(void*));
   #endif
 #endif
 
-#ifdef PLATFORM_UNIX  /* rcg10042001 */
+#ifdef PLATFORM_WIN32
+    #include <direct.h>
+#else
     #include <stdio.h>
     #include <string.h>
     #include <stdlib.h>
