@@ -19,7 +19,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
   #pragma once
 #endif
 
-#ifdef PLATFORM_UNIX
+#ifdef PLATFORM_WIN32
+#include <ws2tcpip.h>
+#else
 #include <fcntl.h>
 #include <netdb.h>
 #include <sys/socket.h>
